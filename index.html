@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brew &amp; Bean Demo Store</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 16px;">
+  <h1>Brew &amp; Bean Coffee</h1>
+  <p><em>Demo store for a portfolio project. Not a real business.</em></p>
+
+  <h2>House Blend Coffee Beans - $15</h2>
+  <button id="add-to-cart">Add to Cart</button>
+  <p id="cart-msg"></p>
+
+  <h2>Join our newsletter</h2>
+  <form id="signup-form">
+    <input type="email" id="email" placeholder="Your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p id="signup-msg"></p>
+
+  <script>
+    document.getElementById("add-to-cart").addEventListener("click", function () {
+      document.getElementById("cart-msg").textContent = "Added to cart!";
+    });
+    document.getElementById("signup-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("signup-msg").textContent = "Thanks for subscribing!";
+    });
+  </script>
+</body>
+</html>
